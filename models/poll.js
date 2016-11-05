@@ -24,11 +24,11 @@ pollSchema.statics.getByNumber = function(number) {
 pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, responseValue) {
   return Poll.updateAsync(
     {'number': pollNumber, isActive: true},
-    {'$set': {
-      'responses.$.number': responseNumber,
-      'responses.$.value': responseValue,
-      'responses.$.timestamp': Date.now()
-    }});
+    {'$push': {'responses': {
+      number: responseNumber,
+      value: responseValue,
+      timestamp: Date.now()
+    }}});
 }
 
 pollSchema.index({'number' : 1});
