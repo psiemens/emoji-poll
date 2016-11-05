@@ -6,7 +6,6 @@ var app = express();
 
 var api = require('./routers/api');
 
-
 // Connect to mongodb
 mongoose.set('debug', true);
 mongoose.connect(process.env.MONGODB_URI);
@@ -17,6 +16,9 @@ mongoose.connection.on('error', function() {
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
