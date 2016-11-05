@@ -1,2 +1,2 @@
-web: npm run build-css && node index.js
+web: node index.js
 watch: nodemon index.js
