@@ -21,15 +21,20 @@ module.exports = {
   },
 
   createPoll: function(req, res) {
-    return Poll.createAsync({
-      title: req.body.title,
-      body:  req.body.body,
-      number: req.body.number,
-      isActive: true
-    })
-      .then(function(poll) {
-        res.send(poll);
-      });
+    return Poll.updateAsync(
+      {number: req.body.number},
+      {'$set': {'isActive': false}}
+    ).then(function() {
+      return Poll.createAsync({
+        title: req.body.title,
+        body:  req.body.body,
+        number: req.body.number,
+        isActive: true
+      })
+        .then(function(poll) {
+          res.send(poll);
+        });
+    });
   }
 
 }
