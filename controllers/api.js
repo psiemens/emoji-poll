@@ -14,7 +14,10 @@ module.exports = {
   },
 
   listPolls: function(req, res) {
-    return res.send(['test', 'test']);
+    return Poll.findAsync({})
+      .then(function(polls) {
+        return res.send(polls);
+      });
   },
 
   createPoll: function(req, res) {
