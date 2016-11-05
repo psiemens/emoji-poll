@@ -35,15 +35,12 @@ module.exports = {
 }
 
 function handleIncoming(params, res) {
+  var pollNumber = params.to,
+      responseNumber = params.msisdn,
+      responseValue = params.text;
 
-  var number = params.to;
-
-  Poll.getByNumber(number)
-    .then(function(poll) {
-
-      console.log(poll);
-
+  return Poll.addResponseToPoll(pollNumber, responseNumber, responseValue)
+    .then(function() {
       return res.sendStatus(200);
-    });
-
+    })
 }

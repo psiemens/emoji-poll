@@ -10,7 +10,7 @@ var pollSchema = new db.Schema({
   isActive:   Boolean,
   responses:  [{
     number: String,
-    location: String,
+    value: String,
     timestamp: Date
   }]
 });
@@ -21,7 +21,15 @@ pollSchema.statics.getByNumber = function(number) {
   });
 };
 
-
+pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, responseValue) {
+  return Poll.updateAsync(
+    {'number': pollNumber, isActive: true},
+    {'$set': {
+      'responses.$.number': responseNumber,
+      'responses.$.value': responseValue,
+      'responses.$.timestamp': Date.now()
+    }});
+}
 
 pollSchema.index({'number' : 1});
 
