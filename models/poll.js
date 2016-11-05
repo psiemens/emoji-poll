@@ -7,6 +7,7 @@ var pollSchema = new db.Schema({
   title:      String,
   body:       String,
   number:     String,
+  slug:       String,
   isActive:   Boolean,
   responses:  [{
     number: String,

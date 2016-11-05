@@ -29,6 +29,7 @@ module.exports = {
         title: req.body.title,
         body:  req.body.body,
         number: req.body.number,
+        slug: req.body.slug,
         isActive: true
       })
         .then(function(poll) {
