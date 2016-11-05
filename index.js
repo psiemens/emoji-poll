@@ -4,7 +4,8 @@ var bodyParser = require('body-parser')
 
 var app = express();
 
-var api = require('./routers/api');
+var api = require('./routers/api'),
+    polls = require('./routers/polls');
 
 // Connect to mongodb
 mongoose.set('debug', true);
@@ -25,13 +26,14 @@ app.use(bodyParser.json())
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 
 app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
 app.use('/api', api);
+app.use('/polls', polls);
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));

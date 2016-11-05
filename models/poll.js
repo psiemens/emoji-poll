@@ -9,6 +9,10 @@ var pollSchema = new db.Schema({
   number:     String,
   slug:       String,
   isActive:   Boolean,
+  options:    [{
+    label: String,
+    emoji: String
+  }],
   responses:  [{
     number: String,
     value: String,
@@ -21,6 +25,12 @@ pollSchema.statics.getByNumber = function(number) {
     'number': number
   });
 };
+
+pollSchema.statics.getBySlug = function(slug) {
+  return Poll.findOneAsync({
+    'slug': slug
+  });
+}
 
 pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, responseValue) {
   return Poll.updateAsync(

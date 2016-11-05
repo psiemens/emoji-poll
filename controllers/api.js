@@ -30,6 +30,7 @@ module.exports = {
         body:  req.body.body,
         number: req.body.number,
         slug: req.body.slug,
+        options: req.body.options,
         isActive: true
       })
         .then(function(poll) {

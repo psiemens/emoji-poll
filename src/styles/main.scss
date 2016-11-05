@@ -1,0 +1,60 @@
+$body-background: #fff;
+
+@import "node_modules/bulma/bulma";
+
+
+// Header
+.header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.main-logo {
+  display: inline-block;
+  background-image: url('../images/emojipoll-logo.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 303px;
+  height: 49px;
+}
+
+.content-container {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.poll-content {
+  text-align: center;
+
+  .title {
+    margin-bottom: 3rem;
+  }
+}
+
+.poll-options {
+  margin-bottom: 3rem;
+  li {
+    display: inline-block;
+    margin: 0 1rem;
+    .poll-option-emoji {
+      font-size: 6rem;
+      line-height: 1em;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22);
+    }
+  }
+}
+
+.poll-number {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 3rem;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 0.35em;
+  background: $primary;
+  color: $white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22);
+}

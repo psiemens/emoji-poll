@@ -1,0 +1,15 @@
+extends ../layout.pug
+
+block title
+  title= poll.title
+
+block content
+  .poll-content
+    h1.title.is-1= poll.body
+    ul.poll-options
+      each option in poll.options
+        li
+          .poll-option-emoji= option.emoji
+          .poll-option-label= option.label
+    h3.subtitle.is-3 Text your response to:
+    .poll-number= formatPhoneNumber(poll.number)
