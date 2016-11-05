@@ -14,10 +14,12 @@
   },
   "dependencies": {
     "bluebird": "^3.4.6",
+    "bulma": "^0.2.3",
     "body-parser": "^1.15.2",
     "ejs": "2.4.1",
     "express": "4.13.3",
     "mongoose": "^4.6.6",
+    "node-sass": "^3.11.2"
     "pug": "^0.1.0"
   },
   "repository": {
@@ -29,9 +31,5 @@
     "heroku",
     "express"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "bulma": "^0.2.3",
-    "node-sass": "^3.11.2"
-  }
+  "license": "MIT"
 }
