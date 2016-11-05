@@ -19,7 +19,7 @@
     "ejs": "2.4.1",
     "express": "4.13.3",
     "mongoose": "^4.6.6",
-    "node-sass": "^3.11.2"
+    "node-sass": "^3.11.2",
     "pug": "^0.1.0"
   },
   "repository": {
