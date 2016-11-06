@@ -10,9 +10,9 @@ module.exports = function(socket) {
   });
 
   events.on('new response', function (slug) {
-    console.log('response slug', data.slug);
-    console.log('subscribe slug', data.slug);
-    
+    console.log('response slug', slug);
+    console.log('subscribe slug', poll);
+
     if (poll === slug) {
       Poll.getBySlug(poll)
         .then(function(data) {
