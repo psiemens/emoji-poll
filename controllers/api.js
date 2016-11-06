@@ -62,12 +62,28 @@ function handleIncoming(params, res) {
       });
 
       console.log(labels);
+      console.log(emojis);
+      console.log(letters);
 
-      return emojis[responseValue] || letters[responseValue.toLowerCase()] || labels[responseValue.toLowerCase()];
+      if (emojis.hasOwnProperty(responseValue)) {
+        return emojis[responseValue];
+      }
+
+      var lowerValue = responseValue.toLowerCase();
+
+      if (letters.hasOwnProperty(lowerValue)) {
+        return letters[lowerValue];
+      }
+
+      if (labels.hasOwnProperty(lowerValue)) {
+        return labels[lowerValue];
+      }
+
+      return false;
 
     })
     .then(function(responseIndex) {
-      if (!!responseIndex) {
+      if ( !(responseIndex === false) ) {
         return Poll.addResponseToPoll(pollNumber, responseNumber, responseIndex)
           .then(function(poll) {
 
