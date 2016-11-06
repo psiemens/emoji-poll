@@ -1,3 +1,6 @@
+var socket = io.connect('http://emoji-poll.herokuapp.com/');
+//var socket = io.connect('http://localhost:5000/');
+
 var map = L.Mapzen.map('map', {
   'scene': '/emoji-map.yaml'
 })
@@ -12,12 +15,21 @@ var poll = $('.js-poll');
 var slug = poll.data('slug');
 var options = poll.data('options');
 
-d3.json('/api/polls/fave-fruit/map', function(data) {
+// Socket stuff
+socket.emit('subscribe', { slug: slug });
+socket.on('map update', renderLayers);
+
+// d3.json('/api/polls/fave-fruit/map', function(data) {
+//   citiesLayer = renderLayer(data.cities);
+//   statesLayer = renderLayer(data.states);
+//   updateLayers();
+// });
+
+function renderLayers(data) {
   citiesLayer = renderLayer(data.cities);
   statesLayer = renderLayer(data.states);
-
   updateLayers();
-});
+}
 
 function renderLayer(geojsonFeature) {
   return L.geoJSON(

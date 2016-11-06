@@ -83,6 +83,8 @@ pollSchema.methods.getMapData = function() {
   };
 
   var areaCodes = JSON.parse(fs.readFileSync('data/area-codes.json', 'utf8'));
+  var cities = JSON.parse(fs.readFileSync('data/cities.geojson', 'utf8'));
+  var states = JSON.parse(fs.readFileSync('data/states.geojson', 'utf8'));
 
   var options = this.options;
 
@@ -104,8 +106,37 @@ pollSchema.methods.getMapData = function() {
     data.states[state][response.value] = data.states[state][response.value] + 1;
   });
 
-  return data;
-}
+  var cityData = data.cities,
+      stateData = data.states;
+
+  var cityFeatures = [];
+
+  cities.features.map(function(feature) {
+    feature.properties.responses = cityData[feature.id];
+    if (feature.properties.responses) {
+      cityFeatures.push(feature);
+    }
+  });
+
+  cities.features = cityFeatures;
+
+  var stateFeatures = [];
+
+  states.features.map(function(feature) {
+    feature.properties.responses = stateData[feature.id];
+    if (feature.properties.responses) {
+      stateFeatures.push(feature);
+    }
+  })
+
+  states.features = stateFeatures;
+
+  return {
+    cities: cities,
+    states: states
+  };
+
+};
 
 pollSchema.index({'number' : 1});
 
