@@ -4,16 +4,22 @@ var events = require('../helpers/events');
 module.exports = function(socket) {
   var subscribedSlug = null;
 
-  socket.on('subscribe', function (data) {
+  function emitPollData(slug) {
+    Poll.getBySlug(slug)
+      .then(function(poll) {
+        console.log('emitting', poll.getResponseData());
+        socket.emit('update', poll.getResponseData());
+      });
+  }
+
+  socket.on('subscribe', function(data) {
     subscribedSlug = data.slug;
+    emitPollData(subscribedSlug);
   });
 
   events.on('new response', function (slug) {
     if (subscribedSlug === slug) {
-      Poll.getBySlug(slug)
-        .then(function(poll) {
-          socket.emit('update', poll.getResponseData());
-        });
+      emitPollData(subscribedSlug);
     }
   });
 }

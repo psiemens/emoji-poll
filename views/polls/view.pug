@@ -13,7 +13,12 @@ block content
           .poll-option-label= option.label
     h3.subtitle.is-3 Text your response to:
     .poll-number= formatPhoneNumber(poll.number)
-  .js-poll(data-slug=poll.slug)
+  .poll-results
+    .poll-results-legend
+      each option in poll.options
+       .poll-results-legend-item= option.emoji
+    .poll-results-chart
+  .js-poll(data-slug=poll.slug data-options=poll.options)
 
 block scripts
   script(src='/js/poll.js')

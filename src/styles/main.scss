@@ -41,13 +41,64 @@ $body-background: #fff;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22);
-    
+
     .poll-option-emoji {
       font-size: 6rem;
       line-height: 1em;
       text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22);
     }
   }
+}
+
+.poll-results {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 550px;
+
+  .poll-results-legend {
+    padding-right: 2rem;
+    .poll-results-legend-item {
+      height: 4rem;
+      line-height: 4rem;
+      font-size: 3rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .poll-results-chart {
+    flex: 1;
+
+    .poll-results-chart-bar {
+      position: relative;
+      overflow: visible;
+      height: 4rem;
+      line-height: 4rem;
+      margin-bottom: 0.25rem;
+
+      > div {
+        background: #e2e2e2;
+        width: 100%;
+        vertical-align: middle;
+        height: 2rem;
+        display: inline-block;
+        border-radius: 1rem;
+
+        .poll-results-chart-bar-value {
+          position: absolute;
+          right: -5rem;
+          top: 1rem;
+          line-height: 2rem;
+          font-weight: bold;
+          height: 2rem;
+          width: 4rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
 }
 
 .poll-number {
@@ -62,4 +113,6 @@ $body-background: #fff;
   background: $primary;
   color: $white;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22);
+
+  margin-bottom: 3rem;
 }

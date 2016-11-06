@@ -42,8 +42,12 @@ pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, resp
     }}});
 }
 
+function getAreaCode(number) {
+  return number.slice(1, 4);
+}
+
 pollSchema.methods.getResponseData = function() {
-  var data = {};
+  var data = [];
 
   // Initialize values to 0
   this.options.map(function(option, i) {
