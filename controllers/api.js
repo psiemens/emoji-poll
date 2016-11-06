@@ -50,7 +50,7 @@ function handleIncoming(params, res) {
   return Poll.addResponseToPoll(pollNumber, responseNumber, responseValue)
     .then(function(poll) {
 
-      events.emit('new response', poll);
+      events.emit('new response', poll.slug);
 
       return res.sendStatus(200);
     })
