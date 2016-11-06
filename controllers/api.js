@@ -61,8 +61,10 @@ function handleIncoming(params, res) {
         emojis[option.emoji] = i;
       });
 
+      console.log('emoji', responseValue[0]);
+
       if (emojis.hasOwnProperty(responseValue)) {
-        return emojis[responseValue[0]];
+        return emojis[responseValue];
       }
 
       var lowerValue = responseValue.toLowerCase();
