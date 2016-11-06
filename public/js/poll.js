@@ -37,7 +37,7 @@ function renderChart(data) {
     .transition()
     .style('width', function(d) { return x(d) + '%'; });
 
-  bars.
+  bars
     .select('.poll-results-chart-bar-value')
       .html(function(d) {return d; });
 }
