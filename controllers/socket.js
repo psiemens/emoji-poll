@@ -2,17 +2,17 @@ var Poll = require('../models/poll');
 var events = require('../helpers/events');
 
 module.exports = function(socket) {
-  var poll = null;
+  var subscribedSlug = null;
 
   socket.on('subscribe', function (data) {
-    poll = data.slug;
+    subscribedSlug = data.slug;
   });
 
   events.on('new response', function (slug) {
-    if (poll === slug) {
-      Poll.getBySlug(poll)
-        .then(function(data) {
-          socket.emit('update', data.responses);
+    if (subscribedSlug === slug) {
+      Poll.getBySlug(slug)
+        .then(function(poll) {
+          socket.emit('update', poll.getResponseData());
         });
     }
   });

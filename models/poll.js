@@ -42,6 +42,22 @@ pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, resp
     }}});
 }
 
+pollSchema.methods.getResponseData = function() {
+  var data = {};
+
+  // Initialize values to 0
+  this.options.map(function(option, i) {
+    data[i] = 0;
+  });
+
+  // Add responses
+  this.responses.map(function(response) {
+    data[response.value] = data[response.value] + 1;
+  });
+
+  return data;
+}
+
 pollSchema.index({'number' : 1});
 
 var Model = db.model('Poll', pollSchema);
