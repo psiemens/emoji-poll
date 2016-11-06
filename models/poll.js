@@ -1,7 +1,8 @@
 var Poll;
 
-var db        = require('mongoose');
-var Promise   = require('bluebird');
+var db = require('mongoose');
+var Promise = require('bluebird');
+var fs = require('fs');
 
 var pollSchema = new db.Schema({
   title:      String,
@@ -30,7 +31,7 @@ pollSchema.statics.getBySlug = function(slug) {
   return Poll.findOneAsync({
     'slug': slug
   });
-}
+};
 
 pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, responseValue) {
   return Poll.findOneAndUpdateAsync(
@@ -40,10 +41,16 @@ pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, resp
       value: responseValue,
       timestamp: Date.now()
     }}});
-}
+};
 
 function getAreaCode(number) {
   return number.slice(1, 4);
+}
+
+function getCity(areaCodes, number) {
+  var areaCode = getAreaCode(number);
+
+  return areaCodes[areaCode].city;
 }
 
 pollSchema.methods.getResponseData = function() {
@@ -57,6 +64,31 @@ pollSchema.methods.getResponseData = function() {
   // Add responses
   this.responses.map(function(response) {
     data[response.value] = data[response.value] + 1;
+  });
+
+  return data;
+};
+
+pollSchema.methods.getMapData = function() {
+
+  var data = [];
+
+  // Initialize values to 0
+  this.options.map(function(option, i) {
+    data[i] = 0;
+  });
+
+  var areaCodes = JSON.parse(fs.readFileSync('data/area-codes.json', 'utf8'));
+
+  // Add responses
+  this.responses.map(function(response) {
+    var city = getCity(areaCodes, response.number);
+
+    if (!data.hasOwnProperty(city)) {
+      data[city] = this.options.map(function(option) { return 0; });
+    }
+
+    data[city][response.value] = data[response.value] + 1;
   });
 
   return data;

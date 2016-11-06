@@ -1,5 +1,6 @@
 var Poll = require('../models/poll');
 var events = require('../helpers/events');
+var fs = require('fs');
 
 module.exports = {
   home: function(req, res) {
@@ -38,6 +39,21 @@ module.exports = {
           res.send(poll);
         });
     });
+  },
+
+  getMapData: function(req, res) {
+
+    var cities = JSON.parse(fs.readFileSync('data/cities.geojson', 'utf8'));
+
+    cities.features = cities.features.map(function(feature) {
+      feature.properties.emoji = '🍎';
+      return feature;
+    })
+
+    return Poll.getBySlug(req.params.slug)
+      .then(function(poll) {
+        res.send(cities);
+      });
   }
 
 }

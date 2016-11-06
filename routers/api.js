@@ -11,4 +11,6 @@ router.post('/incoming', API.postIncoming);
 router.get('/polls',  API.listPolls);
 router.post('/polls', API.createPoll);
 
+router.get('/polls/:slug/map', API.getMapData);
+
 module.exports = router;

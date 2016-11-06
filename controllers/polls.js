@@ -5,10 +5,13 @@ module.exports = {
   viewPoll: function(req, res) {
     return Poll.getBySlug(req.params.slug)
       .then(function(poll) {
-        console.log(poll.options);
         return res.render('polls/view', {poll: poll, formatPhoneNumber: formatPhoneNumber});
       });
   },
+
+  viewMap: function(req, res) {
+    return res.render('polls/map');
+  }
 }
 
 function formatPhoneNumber(number) {
