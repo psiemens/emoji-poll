@@ -61,10 +61,6 @@ function handleIncoming(params, res) {
         emojis[option.emoji] = i;
       });
 
-      console.log(labels);
-      console.log(emojis);
-      console.log(letters);
-
       if (emojis.hasOwnProperty(responseValue)) {
         return emojis[responseValue];
       }
@@ -84,17 +80,14 @@ function handleIncoming(params, res) {
     })
     .then(function(responseIndex) {
       if ( !(responseIndex === false) ) {
+        // good response
         return Poll.addResponseToPoll(pollNumber, responseNumber, responseIndex)
           .then(function(poll) {
-
             events.emit('new response', poll.slug);
-            console.log('good response', responseValue);
-            console.log(responseIndex);
-
             return res.sendStatus(200);
           });
       } else {
-        console.log('bad response', responseValue);
+        // bad response
         return res.sendStatus(200);
       }
     });
