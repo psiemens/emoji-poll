@@ -14,6 +14,8 @@ var x = d3.scaleLinear().range([0, 100]);
 
 function renderChart(data) {
 
+  console.log(data);
+
   x.domain(d3.extent(data));
 
   var chart = d3.select('.poll-results-chart');
