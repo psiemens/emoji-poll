@@ -10,13 +10,12 @@ socket.emit('subscribe', { slug: slug });
 
 socket.on('update', renderChart);
 
+var chart = d3.select('.poll-results-chart');
 var x = d3.scaleLinear().range([0, 100]);
 
 function renderChart(data) {
 
   x.domain(d3.extent(data));
-
-  var chart = d3.select('.poll-results-chart');
 
   chart.selectAll('.poll-results-chart-bar')
     .data(data, function(d) { return d; })
