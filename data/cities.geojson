@@ -7271,5 +7271,35 @@
 			"city": "Nukulaelae"
 		},
 		"id": "Nukulaelae"
+	}, {
+		"type": "Feature",
+		"properties": {},
+		"id": "San Jose",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-121.89743041992189,
+				37.33577030970146
+			]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {},
+		"id": "Oakland",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-122.2733688354492,
+				37.805172690644405
+			]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {},
+		"id": "San Mateo",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-122.30598449707031,
+				37.54403289174084
+			]
+		}
 	}]
 }
