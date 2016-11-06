@@ -26,6 +26,15 @@ socket.on('map update', renderLayers);
 // });
 
 function renderLayers(data) {
+
+  if (map.hasLayer(citiesLayer)) {
+    map.removeLayer(citiesLayer);
+  }
+
+  if (map.hasLayer(statesLayer)) {
+    map.removeLayer(statesLayer);
+  }
+
   citiesLayer = renderLayer(data.cities);
   statesLayer = renderLayer(data.states);
   updateLayers();
