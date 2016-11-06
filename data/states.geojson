@@ -1,1 +1,749 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-119.77294921874999,37.26530995561875]},"id":"California"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-115.15869140624999,36.61552763134925]},"id":"Nevada"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-111.533203125,34.52466147177172]},"id":"Arizona"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-106.10595703125,34.57895241036948]},"id":"New Mexico"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-105.53466796874999,39.35129035526705]},"id":"Colorado"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-111.59912109375,39.45316112807394]},"id":"Utah"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-116.87255859374999,39.70718665682654]},"id":"Nevada"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-120.43212890625,43.99281450048989]},"id":"Oregon"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-120.1904296875,48.25394114463431]},"id":"Washington"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-109.16015624999999,47.27922900257082]},"id":"Montana"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-107.4462890625,43.75522505306928]},"id":"Wyoming"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-100.48095703125,47.76886840424207]},"id":"North Dakota"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-100.17333984375,45.22848059584359]},"id":"South Dakota"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-94.21875,46.49839225859763]},"id":"Minnesota"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-89.80224609374999,44.933696389694674]},"id":"Wisconsin"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-93.515625,42.27730877423709]},"id":"Iowa"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-99.95361328125,41.96765920367816]},"id":"Nebraska"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-98.6572265625,38.70265930723801]},"id":"Kansas"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-97.5146484375,36.13787471840729]},"id":"Oklahoma"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-98.7890625,32.08257455954592]},"id":"Texas"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-89.69238281249999,33.15594830078649]},"id":"Mississippi"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-92.39501953125,35.35321610123823]},"id":"Arkansas"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-92.57080078125,38.47939467327645]},"id":"Missouri"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-89.27490234375,40.34654412118006]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-86.30859375,40.111688665595956]},"id":"Indiana"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-85.2978515625,37.78808138412046]},"id":"Kentucky"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-85.95703125,36.2265501474709]},"id":"Tennessee"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-86.7919921875,33.100745405144245]},"id":"Alabama"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-92.28515625,31.240985378021307]},"id":"Louisiana"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-83.27636718749999,32.602361666817515]},"id":"Georgia"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-82.02392578125,29.209713225868185]},"id":"Florida"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-80.92529296875,34.252676117101515]},"id":"South Carolina"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-79.365234375,35.99578538642032]},"id":"North Carolina"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-80.74951171875,38.89103282648846]},"id":"West Virginia"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-78.64013671875,37.89219554724437]},"id":"Virginia"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-78.28857421875,41.261291493919884]},"id":"Pennsylvania"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-75.43212890625,42.94033923363181]},"id":"New York"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-72.7294921875,41.77131167976407]},"id":"Connecticut"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-82.72705078125,40.58058466412761]},"id":"Ohio"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-72.7294921875,44.17038488259618]},"id":"Vermont"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-71.60888671875,43.77109381775651]},"id":"New Hampshire"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-71.806640625,42.374778361114195]},"id":"Massachusetts"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-69.2138671875,45.537136680398596]},"id":"Maine"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-71.5594482421875,41.78769700539063]},"id":"Rhode Island"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-74.366455078125,40.287906612507406]},"id":"New Jersey"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-84.451904296875,45.13555516012536]},"id":"Michigan"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-114.5654296875,44.87144275016589]},"id":"Idaho"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-76.86035156249999,39.605688178320804]},"id":"Maryland"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-75.5145263671875,39.07037913108751]},"id":"Delaware"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-156.29150390625,20.416716988945712]},"id":"Hawaii"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-153.017578125,66.01801815922045]},"id":"Alaska"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-125.1123046875,56.022948079627454]},"id":"British Columbia"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-114.7412109375,55.27911529201561]},"id":"Alberta"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-105.9521484375,54.470037612805754]},"id":"Saskatchewan"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-98.5693359375,54.00776876193478]},"id":"Manitoba"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-84.375,49.97948776108648]},"id":"Ontario"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-72.02636718749999,50.764259357116465]},"id":"Quebec"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-66.4013671875,47.21956811231547]},"id":"New Brunswick"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-63.05053710937499,45.336701909968134]},"id":"Nova Scotia"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-59.9853515625,53.592504809039376]},"id":"Newfoundland and Labrador"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.38867187500001,64.16810689799152]},"id":"Northwest Territories"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-133.90136718749997,63.05495931065107]},"id":"Yukon"},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-62.8143310546875,46.30899569419859]},"id":"Prince Edward Island"}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.77294921874999,
+          37.26530995561875
+        ]
+      },
+      "id": "CA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.15869140624999,
+          36.61552763134925
+        ]
+      },
+      "id": "NV"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.533203125,
+          34.52466147177172
+        ]
+      },
+      "id": "AZ"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.10595703125,
+          34.57895241036948
+        ]
+      },
+      "id": "NM"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.53466796874999,
+          39.35129035526705
+        ]
+      },
+      "id": "CO"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.59912109375,
+          39.45316112807394
+        ]
+      },
+      "id": "UT"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.43212890625,
+          43.99281450048989
+        ]
+      },
+      "id": "OR"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.1904296875,
+          48.25394114463431
+        ]
+      },
+      "id": "WA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.16015624999999,
+          47.27922900257082
+        ]
+      },
+      "id": "MT"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.4462890625,
+          43.75522505306928
+        ]
+      },
+      "id": "WY"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.48095703125,
+          47.76886840424207
+        ]
+      },
+      "id": "ND"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.17333984375,
+          45.22848059584359
+        ]
+      },
+      "id": "SD"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.21875,
+          46.49839225859763
+        ]
+      },
+      "id": "MN"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.80224609374999,
+          44.933696389694674
+        ]
+      },
+      "id": "WI"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.515625,
+          42.27730877423709
+        ]
+      },
+      "id": "IA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.95361328125,
+          41.96765920367816
+        ]
+      },
+      "id": "NE"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.6572265625,
+          38.70265930723801
+        ]
+      },
+      "id": "KS"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.5146484375,
+          36.13787471840729
+        ]
+      },
+      "id": "OK"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.7890625,
+          32.08257455954592
+        ]
+      },
+      "id": "TX"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.69238281249999,
+          33.15594830078649
+        ]
+      },
+      "id": "MS"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.39501953125,
+          35.35321610123823
+        ]
+      },
+      "id": "AR"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.57080078125,
+          38.47939467327645
+        ]
+      },
+      "id": "MO"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.27490234375,
+          40.34654412118006
+        ]
+      },
+      "id": "IL"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.30859375,
+          40.111688665595956
+        ]
+      },
+      "id": "IN"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.2978515625,
+          37.78808138412046
+        ]
+      },
+      "id": "KY"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.95703125,
+          36.2265501474709
+        ]
+      },
+      "id": "TN"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.7919921875,
+          33.100745405144245
+        ]
+      },
+      "id": "AL"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.28515625,
+          31.240985378021307
+        ]
+      },
+      "id": "LA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.27636718749999,
+          32.602361666817515
+        ]
+      },
+      "id": "GA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.02392578125,
+          29.209713225868185
+        ]
+      },
+      "id": "FL"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.92529296875,
+          34.252676117101515
+        ]
+      },
+      "id": "SC"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.365234375,
+          35.99578538642032
+        ]
+      },
+      "id": "NC"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.74951171875,
+          38.89103282648846
+        ]
+      },
+      "id": "WV"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.64013671875,
+          37.89219554724437
+        ]
+      },
+      "id": "VA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.28857421875,
+          41.261291493919884
+        ]
+      },
+      "id": "PA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.43212890625,
+          42.94033923363181
+        ]
+      },
+      "id": "NY"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7294921875,
+          41.77131167976407
+        ]
+      },
+      "id": "CT"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.72705078125,
+          40.58058466412761
+        ]
+      },
+      "id": "OH"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7294921875,
+          44.17038488259618
+        ]
+      },
+      "id": "VT"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.60888671875,
+          43.77109381775651
+        ]
+      },
+      "id": "NH"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.806640625,
+          42.374778361114195
+        ]
+      },
+      "id": "MA"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.2138671875,
+          45.537136680398596
+        ]
+      },
+      "id": "ME"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.5594482421875,
+          41.78769700539063
+        ]
+      },
+      "id": "RI"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.366455078125,
+          40.287906612507406
+        ]
+      },
+      "id": "NJ"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.451904296875,
+          45.13555516012536
+        ]
+      },
+      "id": "MI"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.5654296875,
+          44.87144275016589
+        ]
+      },
+      "id": "ID"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.86035156249999,
+          39.605688178320804
+        ]
+      },
+      "id": "MD"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5145263671875,
+          39.07037913108751
+        ]
+      },
+      "id": "DE"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.29150390625,
+          20.416716988945712
+        ]
+      },
+      "id": "HI"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -153.017578125,
+          66.01801815922045
+        ]
+      },
+      "id": "AK"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.1123046875,
+          56.022948079627454
+        ]
+      },
+      "id": "BC"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.7412109375,
+          55.27911529201561
+        ]
+      },
+      "id": "AB"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.9521484375,
+          54.470037612805754
+        ]
+      },
+      "id": "SK"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.5693359375,
+          54.00776876193478
+        ]
+      },
+      "id": "MB"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.375,
+          49.97948776108648
+        ]
+      },
+      "id": "ON"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.02636718749999,
+          50.764259357116465
+        ]
+      },
+      "id": "QC"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.4013671875,
+          47.21956811231547
+        ]
+      },
+      "id": "NB"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.05053710937499,
+          45.336701909968134
+        ]
+      },
+      "id": "NS"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.9853515625,
+          53.592504809039376
+        ]
+      },
+      "id": "NL"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.38867187500001,
+          64.16810689799152
+        ]
+      },
+      "id": "NT"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.90136718749997,
+          63.05495931065107
+        ]
+      },
+      "id": "YT"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.8143310546875,
+          46.30899569419859
+        ]
+      },
+      "id": "PE"
+    }
+  ]
+}
