@@ -14,8 +14,6 @@ var x = d3.scaleLinear().range([0, 100]);
 
 function renderChart(data) {
 
-  console.log(data);
-
   x.domain(d3.extent(data));
 
   var chart = d3.select('.poll-results-chart');
@@ -24,7 +22,7 @@ function renderChart(data) {
     .data(data)
     .enter().append('div')
       .attr('class', 'poll-results-chart-bar')
-      .style('width', function(d) { return x(d) + '%'; })
+      .style('width', function(d) { console.log('updating'); return x(d) + '%'; })
       .append('div')
         .append('div')
           .attr('class', 'poll-results-chart-bar-value')
