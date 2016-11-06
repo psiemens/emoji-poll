@@ -17,14 +17,15 @@ function renderChart(data) {
 
   x.domain(d3.extent(data));
 
-  chart.selectAll('.poll-results-chart-bar')
-    .data(data, function(d) { return d; })
-    .enter().append('div')
-      .attr('class', 'poll-results-chart-bar')
-      .style('width', function(d) { console.log('updating'); return x(d) + '%'; })
+  var bars = chart.selectAll('.poll-results-chart-bar')
+    .data(data);
+
+  bars.enter().append('div')
+    .attr('class', 'poll-results-chart-bar')
+    .style('width', function(d) { console.log('updating'); return x(d) + '%'; })
+    .append('div')
       .append('div')
-        .append('div')
-          .attr('class', 'poll-results-chart-bar-value')
-          .html(function(d) {return d; });
+        .attr('class', 'poll-results-chart-bar-value')
+        .html(function(d) {return d; });
 
 }
