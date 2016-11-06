@@ -14,10 +14,12 @@ block content
     h3.subtitle.is-3 Text your response to:
     .poll-number= formatPhoneNumber(poll.number)
   .poll-results
-    .poll-results-legend
-      each option in poll.options
-       .poll-results-legend-item= option.emoji
+    h4.subtitle.is-4.poll-results-count No responses yet
     .poll-results-chart
+      .poll-results-legend
+        each option in poll.options
+         .poll-results-legend-item= option.emoji
+      .poll-results-bars
   .js-poll(data-slug=poll.slug data-options=poll.options)
 
 block scripts

@@ -20,8 +20,8 @@ $body-background: #fff;
 }
 
 .content-container {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .poll-content {
@@ -51,11 +51,20 @@ $body-background: #fff;
 }
 
 .poll-results {
-  display: flex;
+  display: none;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   max-width: 550px;
+
+  .poll-results-count {
+    text-align: center;
+  }
+
+}
+
+.poll-results-chart {
+  display: flex;
 
   .poll-results-legend {
     padding-right: 2rem;
@@ -67,10 +76,10 @@ $body-background: #fff;
     }
   }
 
-  .poll-results-chart {
+  .poll-results-bars {
     flex: 1;
 
-    .poll-results-chart-bar {
+    .poll-results-bar {
       position: relative;
       overflow: visible;
       height: 4rem;
@@ -87,7 +96,7 @@ $body-background: #fff;
         display: inline-block;
         border-radius: 1rem;
 
-        .poll-results-chart-bar-value {
+        .poll-results-bar-value {
           position: absolute;
           right: -5rem;
           top: 1rem;
