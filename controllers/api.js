@@ -45,17 +45,60 @@ module.exports = {
 
     var cities = JSON.parse(fs.readFileSync('data/cities.geojson', 'utf8'));
 
-    cities.features = cities.features.map(function(feature) {
-      feature.properties.emoji = '🍎';
-      return feature;
-    })
-
     return Poll.getBySlug(req.params.slug)
       .then(function(poll) {
+        var cityData = poll.getCityData();
+
+        var features = [];
+
+        cities.features.map(function(feature) {
+          feature.properties.responses = cityData[feature.id];
+          if (feature.properties.responses) {
+            features.push(feature);
+          }
+        })
+
+        cities.features = features;
+
         res.send(cities);
+
       });
   }
-
+  //
+  // getMapData: function(req, res) {
+  //
+  //   var cities = JSON.parse(fs.readFileSync('data/cities-4.geojson', 'utf8'));
+  //
+  //   return Poll.getBySlug(req.params.slug)
+  //     .then(function(poll) {
+  //       var cityData = poll.getCityData();
+  //
+  //       var data = {
+  //         type: 'FeatureCollection',
+  //         features: []
+  //       };
+  //
+  //       cities.map(function(city) {
+  //         var responses = cityData[city.city];
+  //         if (responses) {
+  //           data.features.push({
+  //             'type': 'Feature',
+  //             'geometry': {
+  //         			'type': 'Point',
+  //         			'coordinates': [city.longitude, city.latitude]
+  //         		},
+  //         		'properties': {
+  //         			'city': city.city,
+  //               'responses': responses
+  //         		}
+  //           });
+  //         }
+  //       });
+  //
+  //       res.send(data);
+  //
+  //     });
+  // }
 }
 
 function handleIncoming(params, res) {

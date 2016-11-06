@@ -206,8 +206,7 @@
 		"type": "Feature",
 		"properties": {
 			"wikipedia": "San_Francisco",
-			"city": "San Francisco",
-			"emoji": "🍎"
+			"city": "San Francisco"
 		},
 		"id": "San Francisco"
 	}, {

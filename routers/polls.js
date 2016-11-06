@@ -3,7 +3,7 @@ var router = express.Router();
 
 var API = require('../controllers/polls');
 
-router.get('/map', API.viewMap);
 router.get('/:slug', API.viewPoll);
+router.get('/:slug/map', API.viewMap);
 
 module.exports = router;

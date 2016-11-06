@@ -69,26 +69,23 @@ pollSchema.methods.getResponseData = function() {
   return data;
 };
 
-pollSchema.methods.getMapData = function() {
+pollSchema.methods.getCityData = function() {
 
-  var data = [];
-
-  // Initialize values to 0
-  this.options.map(function(option, i) {
-    data[i] = 0;
-  });
+  var data = {};
 
   var areaCodes = JSON.parse(fs.readFileSync('data/area-codes.json', 'utf8'));
+
+  var options = this.options;
 
   // Add responses
   this.responses.map(function(response) {
     var city = getCity(areaCodes, response.number);
 
     if (!data.hasOwnProperty(city)) {
-      data[city] = this.options.map(function(option) { return 0; });
+      data[city] = options.map(function(option) { return 0; });
     }
 
-    data[city][response.value] = data[response.value] + 1;
+    data[city][response.value] = data[city][response.value] + 1;
   });
 
   return data;

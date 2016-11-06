@@ -2,6 +2,7 @@ extends ../map-layout.pug
 
 block content
   #map
+  .js-poll(data-slug=poll.slug data-options=poll.options)
 
 block styles
   link(rel='stylesheet' href='https://mapzen.com/js/mapzen.css')

@@ -10,7 +10,10 @@ module.exports = {
   },
 
   viewMap: function(req, res) {
-    return res.render('polls/map');
+    return Poll.getBySlug(req.params.slug)
+      .then(function(poll) {
+        return res.render('polls/map', {poll: poll});
+      });
   }
 }
 

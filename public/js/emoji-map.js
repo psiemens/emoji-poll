@@ -8,13 +8,28 @@ map.setView([37.7749, -122.4194], 4);
 
 var citiesLayer;
 
+var poll = $('.js-poll');
+
+var slug = poll.data('slug');
+var options = poll.data('options');
+
 d3.json('/api/polls/fave-fruit/map', function(geojsonFeature) {
   citiesLayer = L.geoJSON(
     geojsonFeature,
     {
       pointToLayer: function (feature, latlng) {
-        var emojiIcon = L.divIcon({className: 'map-emoji', html: feature.properties.emoji});
-        return L.marker(latlng, {icon: emojiIcon});
+        console.log(feature);
+        console.log(latlng);
+        var responses = feature.properties.responses;
+
+        console.log(responses);
+
+        if (responses) {
+          console.log('rendering');
+          var option = options[responses.indexOf(d3.max(responses))];
+          var emojiIcon = L.divIcon({className: 'map-emoji', html: option.emoji});
+          return L.marker(latlng, {icon: emojiIcon});
+        }
       }
     }
   );
