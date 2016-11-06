@@ -33,7 +33,7 @@ pollSchema.statics.getBySlug = function(slug) {
 }
 
 pollSchema.statics.addResponseToPoll = function(pollNumber, responseNumber, responseValue) {
-  return Poll.findOneAndUpdateAsync(
+  return Poll.updateAsync(
     {'number': pollNumber, isActive: true},
     {'$push': {'responses': {
       number: responseNumber,
