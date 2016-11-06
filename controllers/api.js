@@ -44,23 +44,40 @@ module.exports = {
   getMapData: function(req, res) {
 
     var cities = JSON.parse(fs.readFileSync('data/cities.geojson', 'utf8'));
+    var states = JSON.parse(fs.readFileSync('data/states.geojson', 'utf8'));
 
     return Poll.getBySlug(req.params.slug)
       .then(function(poll) {
-        var cityData = poll.getCityData();
+        var mapData = poll.getMapData(),
+            cityData = mapData.cities,
+            stateData = mapData.states;
 
-        var features = [];
+        var cityFeatures = [];
 
         cities.features.map(function(feature) {
           feature.properties.responses = cityData[feature.id];
           if (feature.properties.responses) {
-            features.push(feature);
+            cityFeatures.push(feature);
           }
         })
 
-        cities.features = features;
+        cities.features = cityFeatures;
 
-        res.send(cities);
+        var stateFeatures = [];
+
+        states.features.map(function(feature) {
+          feature.properties.responses = stateData[feature.id];
+          if (feature.properties.responses) {
+            stateFeatures.push(feature);
+          }
+        })
+
+        states.features = stateFeatures;
+
+        res.send({
+          cities: cities,
+          states: states
+        });
 
       });
   }

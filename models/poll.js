@@ -53,6 +53,12 @@ function getCity(areaCodes, number) {
   return areaCodes[areaCode].city;
 }
 
+function getState(areaCodes, number) {
+  var areaCode = getAreaCode(number);
+
+  return areaCodes[areaCode].state;
+}
+
 pollSchema.methods.getResponseData = function() {
   var data = [];
 
@@ -69,9 +75,12 @@ pollSchema.methods.getResponseData = function() {
   return data;
 };
 
-pollSchema.methods.getCityData = function() {
+pollSchema.methods.getMapData = function() {
 
-  var data = {};
+  var data = {
+    cities: {},
+    states: {}
+  };
 
   var areaCodes = JSON.parse(fs.readFileSync('data/area-codes.json', 'utf8'));
 
@@ -80,12 +89,19 @@ pollSchema.methods.getCityData = function() {
   // Add responses
   this.responses.map(function(response) {
     var city = getCity(areaCodes, response.number);
+    var state = getState(areaCodes, response.number);
 
-    if (!data.hasOwnProperty(city)) {
-      data[city] = options.map(function(option) { return 0; });
+    if (!data.cities.hasOwnProperty(city)) {
+      data.cities[city] = options.map(function(option) { return 0; });
     }
 
-    data[city][response.value] = data[city][response.value] + 1;
+    data.cities[city][response.value] = data.cities[city][response.value] + 1;
+
+    if (!data.states.hasOwnProperty(state)) {
+      data.states[state] = options.map(function(option) { return 0; });
+    }
+
+    data.states[state][response.value] = data.states[state][response.value] + 1;
   });
 
   return data;
