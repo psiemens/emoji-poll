@@ -30,6 +30,6 @@ function renderChart(data) {
 
   bars.exit().remove();
 
-  bar.style('width', function(d) { console.log('updating'); return x(d) + '%'; });
+  bars.style('width', function(d) { console.log('updating'); return x(d) + '%'; });
 
 }
