@@ -23,18 +23,18 @@ function renderChart(data) {
   // Enter
   bars.enter().append('div')
     .attr('class', 'poll-results-chart-bar')
-    .style('width', function(d) { console.log('inserting'); return x(d) + '%'; })
+    .style('width', function(d) { return x(d) + '%'; })
     .append('div')
       .append('div')
         .attr('class', 'poll-results-chart-bar-value')
         .html(function(d) {return d; });
 
   // Exit
-  bars.exit().remove();
+  //bars.exit().remove();
 
   // Update
   bars
-    .style('width', function(d) { console.log('updating'); return x(d) + '%'; })
+    .style('width', function(d) { return x(d) + '%'; })
     .select('.poll-results-chart-bar-value')
       .html(function(d) {return d; });
 }
