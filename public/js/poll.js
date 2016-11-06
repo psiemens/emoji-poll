@@ -15,10 +15,13 @@ var x = d3.scaleLinear().range([10, 100]);
 
 function renderChart(data) {
 
+  // Set end of domain to be the max value in data
   x.domain([0, d3.max(data)]);
 
+  // Determine total number of responses
   var totalResponses = d3.sum(data);
 
+  // Select bars
   var bars = chart.selectAll('.poll-results-bar')
     .data(data);
 
