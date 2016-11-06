@@ -62,7 +62,7 @@ function handleIncoming(params, res) {
       });
 
       if (emojis.hasOwnProperty(responseValue)) {
-        return emojis[responseValue];
+        return emojis[responseValue[0]];
       }
 
       var lowerValue = responseValue.toLowerCase();
