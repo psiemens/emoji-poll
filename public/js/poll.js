@@ -34,7 +34,10 @@ function renderChart(data) {
 
   // Update
   bars
-    .style('width', function(d) { return x(d) + '%'; })
+    .transition()
+    .style('width', function(d) { return x(d) + '%'; });
+
+  bars.
     .select('.poll-results-chart-bar-value')
       .html(function(d) {return d; });
 }
