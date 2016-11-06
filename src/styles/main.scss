@@ -175,3 +175,24 @@ html,body {
   left: -2rem;
   top: -2rem;
 }
+
+@media screen and (max-width: 800px) {
+  .main-logo {
+    width: 585px;
+    height: 110px;
+  }
+  .subtitle {
+    font-size: 54px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .poll-number {
+    font-size: 4rem;
+  }
+  .poll-results {
+    max-width: 720px;
+  }
+  h4.subtitle.is-4.poll-results-count {
+    font-size: 52px;
+  }
+}
