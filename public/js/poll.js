@@ -20,6 +20,7 @@ function renderChart(data) {
   var bars = chart.selectAll('.poll-results-chart-bar')
     .data(data);
 
+  // Enter
   bars.enter().append('div')
     .attr('class', 'poll-results-chart-bar')
     .style('width', function(d) { console.log('inserting'); return x(d) + '%'; })
@@ -28,8 +29,12 @@ function renderChart(data) {
         .attr('class', 'poll-results-chart-bar-value')
         .html(function(d) {return d; });
 
+  // Exit
   bars.exit().remove();
 
-  bars.style('width', function(d) { console.log('updating'); return x(d) + '%'; });
-
+  // Update
+  bars
+    .style('width', function(d) { console.log('updating'); return x(d) + '%'; })
+    .select('.poll-results-chart-bar-value')
+      .html(function(d) {return d; });
 }
