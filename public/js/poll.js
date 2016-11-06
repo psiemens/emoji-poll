@@ -11,11 +11,11 @@ socket.emit('subscribe', { slug: slug });
 socket.on('update', renderChart);
 
 var chart = d3.select('.poll-results-chart');
-var x = d3.scaleLinear().range([0, 100]);
+var x = d3.scaleLinear().range([10, 100]);
 
 function renderChart(data) {
 
-  x.domain(d3.extent(data));
+  x.domain([0, d3.max(data)]);
 
   var bars = chart.selectAll('.poll-results-chart-bar')
     .data(data);
