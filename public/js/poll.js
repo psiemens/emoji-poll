@@ -19,7 +19,7 @@ function renderChart(data) {
   var chart = d3.select('.poll-results-chart');
 
   chart.selectAll('.poll-results-chart-bar')
-    .data(data)
+    .data(data, function(d) { return d; })
     .enter().append('div')
       .attr('class', 'poll-results-chart-bar')
       .style('width', function(d) { console.log('updating'); return x(d) + '%'; })
