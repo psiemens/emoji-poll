@@ -1,4 +1,5 @@
 var Poll = require('../models/poll');
+var events = require('../helpers/events');
 
 module.exports = {
   home: function(req, res) {
@@ -47,7 +48,10 @@ function handleIncoming(params, res) {
       responseValue = params.text;
 
   return Poll.addResponseToPoll(pollNumber, responseNumber, responseValue)
-    .then(function() {
+    .then(function(poll) {
+
+      events.emit('new response', poll);
+
       return res.sendStatus(200);
     })
 }

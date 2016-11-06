@@ -13,3 +13,7 @@ block content
           .poll-option-label= option.label
     h3.subtitle.is-3 Text your response to:
     .poll-number= formatPhoneNumber(poll.number)
+  .js-poll(data-slug=poll.slug)
+
+block scripts
+  script(src='/js/poll.js')

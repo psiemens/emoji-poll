@@ -4,8 +4,13 @@ var bodyParser = require('body-parser')
 
 var app = express();
 
+var server = app.listen(process.env.PORT || 5000);
+var io = require('socket.io')(server);
+
 var api = require('./routers/api'),
     polls = require('./routers/polls');
+
+var socket = require('./controllers/socket');
 
 // Connect to mongodb
 mongoose.set('debug', true);
@@ -13,8 +18,6 @@ mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('error', function() {
   console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
 });
-
-app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
 
@@ -34,6 +37,8 @@ app.get('/', function(request, response) {
 
 app.use('/api', api);
 app.use('/polls', polls);
+
+io.on('connection', socket);
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
