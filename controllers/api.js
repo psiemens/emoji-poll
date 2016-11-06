@@ -47,11 +47,38 @@ function handleIncoming(params, res) {
       responseNumber = params.msisdn,
       responseValue = params.text;
 
-  return Poll.addResponseToPoll(pollNumber, responseNumber, responseValue)
+  return Poll.getByNumber(pollNumber)
     .then(function(poll) {
+      var options = poll.options;
 
-      events.emit('new response', poll.slug);
+      var letters = { a: 0, b: 1, c: 2, d: 3 };
+      var labels = {};
+      var emojis = {};
 
-      return res.sendStatus(200);
+      options.map(function(option, i) {
+        var label = option.label.toLowerCase()
+        labels[label] = i;
+        emojis[option.emoji] = i;
+      });
+
+      return letters[responseValue] || labels[responseValue] || emojis[responseValue];
+
     })
+    .then(function(responseIndex) {
+      if (!!responseIndex) {
+        return Poll.addResponseToPoll(pollNumber, responseNumber, responseIndex)
+          .then(function(poll) {
+
+            events.emit('new response', poll.slug);
+            console.log('good response', responseValue);
+            console.log(responseIndex);
+
+            return res.sendStatus(200);
+          });
+      } else {
+        console.log('bad response', responseValue);
+        return res.sendStatus(200);
+      }
+    });
+
 }
