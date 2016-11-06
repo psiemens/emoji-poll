@@ -9,7 +9,8 @@ module.exports = function(socket) {
   });
 
   events.on('new response', function (data) {
-    console.log('response', data);
+    console.log('response slug', data.slug);
+    console.log('subscribe slug', data.slug);
     if (poll === data.slug) {
       socket.emit('update', data.responses);
     }
