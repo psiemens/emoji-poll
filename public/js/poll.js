@@ -34,7 +34,6 @@ function renderChart(data) {
 
   // Update
   bars
-    .transition()
     .style('width', function(d) { return x(d) + '%'; });
 
   bars

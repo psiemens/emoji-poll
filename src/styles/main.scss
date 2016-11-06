@@ -77,6 +77,8 @@ $body-background: #fff;
       line-height: 4rem;
       margin-bottom: 0.25rem;
 
+      transition: width 0.5s;
+
       > div {
         background: #e2e2e2;
         width: 100%;
