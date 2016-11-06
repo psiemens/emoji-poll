@@ -50,11 +50,23 @@ function renderLayer(geojsonFeature) {
         if (responses) {
           var option = options[responses.indexOf(d3.max(responses))];
           var emojiIcon = L.divIcon({className: 'map-emoji', html: option.emoji});
-          return L.marker(latlng, {icon: emojiIcon});
+          var marker = L.marker(latlng, {icon: emojiIcon});
+          marker.bindTooltip(renderTooltip(feature)).openTooltip();
+          return marker;
         }
       }
     }
   );
+}
+
+function renderTooltip(feature) {
+  var results = '';
+
+  feature.properties.responses.map(function(response, i) {
+    results += options[i].emoji + '&nbsp;&nbsp;' + response + '<br/>';
+  });
+
+  return '<div><strong>' + feature.id +  '</strong><br/>' + results + '</div>'
 }
 
 function updateLayers() {

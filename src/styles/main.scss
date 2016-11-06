@@ -141,6 +141,35 @@ html,body {
   padding: 0;
 }
 
+.map-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-header {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-bottom: 1px solid #c7c7c7;
+  height: 5rem;
+  line-height: 5rem;
+  .main-logo {
+    width: 230px;
+    height: 38px;
+    margin-right: 2rem;
+    vertical-align: middle;
+  }
+
+  .map-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0.35rem;
+  }
+}
+
+.map-box {
+  flex: 1;
+}
+
 .map-emoji {
   font-size: 4rem;
   left: -2rem;

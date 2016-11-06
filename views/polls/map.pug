@@ -4,6 +4,9 @@ block content
   #map
   .js-poll(data-slug=poll.slug data-options=poll.options)
 
+block map-title
+  h1.title.is-4.map-title= poll.body
+
 block styles
   link(rel='stylesheet' href='https://mapzen.com/js/mapzen.css')
   link(rel='stylesheet' href='/css/main.css')
