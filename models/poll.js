@@ -15,7 +15,7 @@ var pollSchema = new db.Schema({
   }],
   responses:  [{
     number: String,
-    value: String,
+    value: Number,
     timestamp: Date
   }]
 });
