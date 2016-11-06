@@ -61,7 +61,7 @@ function handleIncoming(params, res) {
         emojis[option.emoji] = i;
       });
 
-      return letters[responseValue] || labels[responseValue] || emojis[responseValue];
+      return emojis[responseValue] || letters[responseValue.toLowerCase()] || labels[responseValue.toLowerCase()];
 
     })
     .then(function(responseIndex) {
