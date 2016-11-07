@@ -19,12 +19,6 @@ var options = poll.data('options');
 socket.emit('subscribe', { slug: slug });
 socket.on('map update', renderLayers);
 
-// d3.json('/api/polls/fave-fruit/map', function(data) {
-//   citiesLayer = renderLayer(data.cities);
-//   statesLayer = renderLayer(data.states);
-//   updateLayers();
-// });
-
 function renderLayers(data) {
 
   if (map.hasLayer(citiesLayer)) {

@@ -2,9 +2,6 @@ var Poll = require('../models/poll');
 var events = require('../helpers/events');
 
 module.exports = {
-  home: function(req, res) {
-    return res.send({data: 'TEST'});
-  },
 
   getIncoming: function(req, res) {
     return handleIncoming(req.query, res);

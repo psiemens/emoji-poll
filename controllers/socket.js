@@ -7,7 +7,6 @@ module.exports = function(socket) {
   function emitPollData(slug) {
     Poll.getBySlug(slug)
       .then(function(poll) {
-        console.log('emitting data');
         socket.emit('update', poll.getResponseData());
         socket.emit('map update', poll.getMapData());
       });
