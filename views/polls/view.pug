@@ -14,7 +14,10 @@ block content
     h3.subtitle.is-3 Text your response to:
     .poll-number= formatPhoneNumber(poll.number)
   .poll-results
-    h4.subtitle.is-4.poll-results-count No responses yet
+    h4.subtitle.is-4
+      span.poll-results-count No responses yet
+      span &nbsp;&middot;&nbsp;
+      a(href='/polls/' + poll.slug + '/map/' target='_blank') View on map
     .poll-results-chart
       .poll-results-legend
         each option in poll.options
